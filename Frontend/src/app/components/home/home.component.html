@@ -1,0 +1,49 @@
+<div class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#"><h1><i>BookMyShow</i></h1></a>
+    
+    <div class="navbar-nav" style="display: flex; align-items: center; flex-direction: row;">
+        <!-- Add more buttons here -->
+        <div class="nav-item text-nowrap">
+            <a style="background: rgba(243, 243, 243, 0.989);
+            color: #0303f7; font-weight: bold;
+            border-radius: 7px;
+            margin: 10px;" class="nav-link px-3 cursor-pointer"routerLink="/login">Login</a>
+        </div>
+        <div class="nav-item text-nowrap">
+            <a style="background: rgba(243, 243, 243, 0.989);
+            color: #0303f7; font-weight: bold;
+            border-radius: 7px;
+            margin: 10px;" class="nav-link px-3 cursor-pointer" routerLink="/signup">Register</a>
+        </div>
+    </div>
+  </div>
+  <div class="outer">
+     <div class="movie-list">
+      <div class="movie-card" *ngFor="let movie of movies">
+        <img [src]="movie.posterurl" alt="{{ movie.title }}" class="movie-poster">
+        <div class="movie-info">
+          <h2>{{ movie.title }}</h2>
+          <p>{{ movie.genre }}</p>
+          <p>{{movie.language}}</p>
+          <p>Rating: {{ movie.rating }}</p>
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal">Book Ticket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title" id="exampleModalLabel"> <span style="font-size: 25px;font-weight:700">Login to Movimate</span><br>
+                    <small>Please login to book your seat and get ticket.</small></p>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal" routerLink="/login">Login</button>
+                <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
