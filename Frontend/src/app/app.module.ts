@@ -10,11 +10,17 @@ import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgToastModule } from 'ng-angular-popup';
 import { AuthService } from './services/auth.service';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CityService } from './services/city.service';
+import { UserStoreService } from './services/user-store.service';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +28,9 @@ import { AuthService } from './services/auth.service';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgToastModule
+    NgToastModule,
   ],
-  providers: [MoviesService,AuthService],
+  providers: [MoviesService,AuthService,CityService,UserStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
