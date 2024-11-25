@@ -18,15 +18,19 @@
     </div>
   </div>
   <div class="outer">
-     <div class="movie-list">
-      <div class="movie-card" *ngFor="let movie of movies">
-        <img [src]="movie.posterurl" alt="{{ movie.title }}" class="movie-poster">
-        <div class="movie-info">
-          <h2>{{ movie.title }}</h2>
-          <p>{{ movie.genre }}</p>
-          <p>{{movie.language}}</p>
-          <p>Rating: {{ movie.rating }}</p>
-          <button data-bs-toggle="modal" data-bs-target="#exampleModal">Book Ticket</button>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let movie of movies">
+          <div class="card mb-10">
+            <div class="card-poster" [style.background-image]="'url(' + movie.posterUrl + ')'"></div>
+            <div class="card-body">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <p class="card-text">Language: {{ movie.language }}</p>
+              <p class="card-text">Duration: {{ movie.durationMinutes }} minutes</p>
+              <p class="card-text">Release Date: {{ movie.releaseDate | date:'shortDate' }}</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Ticket</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,13 +40,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <p class="modal-title" id="exampleModalLabel"> <span style="font-size: 25px;font-weight:700">Login to Movimate</span><br>
+                <p class="modal-title para" id="exampleModalLabel"> <span style="font-size: 25px;font-weight:700">Login to Movimate</span><br>
                     <small>Please login to book your seat and get ticket.</small></p>
             </div>
             <div class="modal-footer">
                 
-                <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal" routerLink="/login">Login</button>
-                <button  type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary bton"  data-bs-dismiss="modal" routerLink="/login">Login</button>
+                <button  type="button" class="btn btn-secondary bton" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

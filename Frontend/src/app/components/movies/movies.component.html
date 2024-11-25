@@ -1,0 +1,45 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Project-k</a>
+  
+      <!-- Search bar -->
+      <form class="form-inline">
+        <input class="form-control mr-2" type="search" placeholder="Search Movies" [(ngModel)]="movieFilter" name="movieFilter" (input)="filterMovies()" />
+      </form>
+  
+      <div class="navbar-text">
+        <!-- <span>Selected City: {{ cityMappings[selectedCityID] || 'Unknown' }}</span> -->
+         <span>Selected City: {{selectedCityName}}</span>
+      </div>
+  
+      <div class="navbar-text ml-auto">
+        <span>Language:</span>
+        <div class="btn-group ml-2">
+          <button type="button" class="btn" [ngClass]="{'btn-secondary': selectedLanguage !== 'Telugu', 'btn-primary': selectedLanguage === 'Telugu'}" (click)="filterByLanguage('Telugu')">Telugu</button>
+          <button type="button" class="btn" [ngClass]="{'btn-secondary': selectedLanguage !== 'Hindi', 'btn-primary': selectedLanguage === 'Hindi'}" (click)="filterByLanguage('Hindi')">Hindi</button>
+          <button type="button" class="btn" [ngClass]="{'btn-secondary': selectedLanguage !== 'English', 'btn-primary': selectedLanguage === 'English'}" (click)="filterByLanguage('English')">English</button>
+          <button type="button" class="btn" [ngClass]="{'btn-secondary': selectedLanguage !== 'Tamil', 'btn-primary': selectedLanguage === 'Tamil'}" (click)="filterByLanguage('Tamil')">Tamil</button>
+          <!-- Add more language buttons as needed -->
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Movies list -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let movie of filteredMovies">
+        <div class="card mb-10">
+          <div class="card-poster" [style.background-image]="'url(' + movie.posterUrl + ')'"></div>
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">Language: {{ movie.language }}</p>
+            <p class="card-text">Duration: {{ movie.durationMinutes }} minutes</p>
+            <p class="card-text">Release Date: {{ movie.releaseDate | date:'shortDate' }}</p>
+            <button class="btn btn-primary" (click)="bookTicket(movie.movieID)">Book Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

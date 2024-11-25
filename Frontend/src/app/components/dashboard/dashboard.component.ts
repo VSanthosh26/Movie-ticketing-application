@@ -54,7 +54,7 @@ export class DashboardComponent implements OnInit{
     
     // Use the Angular router to navigate to the "movies" route with the selected city as a parameter
     this.router.navigate(['/movies', this.selectedCityID],{
-      queryParams: { fullName: this.fullName }
+      queryParams: { fullName: this.fullName, City:this.selectedCity }
     });
   }
   filterCities() {

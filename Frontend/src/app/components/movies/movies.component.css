@@ -1,0 +1,40 @@
+/* Add custom styles here */
+
+/* Style for navbar */
+.navbar {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for movie cards */
+  .card {
+    position: relative;
+    max-width: 20rem;
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style for movie posters */
+  .card-poster {
+    position: relative;
+    width: 100%;
+    height: 300px; /* You can adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Style for movie titles */
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: bold;
+  }
+  
+  /* Style for book ticket buttons */
+  .btn-primary {
+    width: 100%;
+  }
+  

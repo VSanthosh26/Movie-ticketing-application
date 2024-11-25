@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from '../../services/movies.service';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { MoviesService } from '../../services/movies.service';
 })
 export class HomeComponent implements OnInit{
   public movies:any[] =[];
-  constructor(private movieservice:MoviesService){}
+  constructor(private movieservice:MovieService){}
   ngOnInit() {
     this.movieservice.getMovies().subscribe((data:any[])=>{
       this.movies=data;

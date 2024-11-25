@@ -1,63 +1,44 @@
 /* Styles for the movie cards */
-.movie-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.card {
+  position: relative;
+  max-width: 20rem;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Style for movie posters */
+.card-poster {
+  position: relative;
+  width: 100%;
+  height: 300px; /* You can adjust the height as needed */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style for movie titles */
+.card-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+/* Style for book ticket buttons */
+.btn-primary {
+  width: 100%;
+}
   
-  .movie-card {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Increased box shadow for depth */
-    transition: transform 0.2s;
-    border-radius: 10px; /* Rounded corners for the card */
-    overflow: hidden; /* Hide poster overflow */
-  }
-  
-  .movie-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-  }
-  
-  /* Styles for the movie poster */
-  .movie-poster {
-    width: 100%;
-    height: 260px;
-    max-height: 600px;
-    object-fit: cover;
-  }
-  
-  img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 20px;
-    position: relative
-  }
-  
-  /* Styles for the movie information */
-  .movie-info {
-    padding: 10px;
-  }
-  
-  h2 {
-    font-size: 1.4rem; /* Increased font size */
-    margin: 0;
-    color: #333; /* Darker text color */
-    text-shadow: 1px 1px 1px #fff; /* Text shadow for better visibility */
-  }
-  
-  p {
+.para{
     margin: 0;
     margin-top: 5px;
     color: #777; /* Slightly lighter text color */
   }
   
   /* Button style */
-  button {
+  .bton{
     display: block;
     background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background */
     color: #fff;
@@ -71,6 +52,5 @@
   }
   
   button:hover {
-    background: linear-gradient(135deg, #0056b3, #004499); /* Adjusted gradient on hover */
     transform: scale(1.1); /* Slightly scale up on hover */
   }
