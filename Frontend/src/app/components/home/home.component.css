@@ -1,4 +1,7 @@
 /* Styles for the movie cards */
+.outer{
+  background-color: lavender;
+}
 .card {
   position: relative;
   max-width: 20rem;

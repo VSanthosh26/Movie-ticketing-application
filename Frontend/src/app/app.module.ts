@@ -15,6 +15,10 @@ import { CityService } from './services/city.service';
 import { UserStoreService } from './services/user-store.service';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieService } from './services/movie.service';
+import { TheatresComponent } from './components/theatres/theatres.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { TheatresService } from './services/theatres.service';
+import { BookingService } from './services/booking.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,9 @@ import { MovieService } from './services/movie.service';
     SignupComponent,
     LoginComponent,
     DashboardComponent,
-    MoviesComponent
+    MoviesComponent,
+    TheatresComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,7 @@ import { MovieService } from './services/movie.service';
     ReactiveFormsModule,
     NgToastModule,
   ],
-  providers: [MovieService,AuthService,CityService,UserStoreService],
+  providers: [MovieService,AuthService,CityService,UserStoreService,TheatresService,BookingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

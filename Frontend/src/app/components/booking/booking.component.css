@@ -1,0 +1,143 @@
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    min-height: 100vh; /* Adjust the height as needed to fit the screen */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    width:100%
+  }
+  
+  .dropdown {
+    margin-right: 20px;
+    select {
+      padding: 5px;
+      font-size: 16px;
+      background-color: #333;
+      color: #fff;
+    }
+  }
+  
+  .total-fare {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .proceed-button {
+    text-align: right;
+    button {
+      background-color: #ff5252;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+  
+  .seat-legend {
+    h3 {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        &.available {
+          background-color: #b2dfdb;
+        }
+        &.selected {
+          background-color: #ff5252;
+        }
+        div {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  
+  .section {
+    background-color: #fff;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    h3 {
+      font-size: 24px;
+    }
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  
+  .seat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2dfdb;
+    width: 40px;
+    height: 40px;
+    margin: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    &.selected {
+      background-color: #ff5252;
+    }
+  }
+  
+  .screen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Background color for the screen area */
+    height: 100px; /* You can adjust the height as needed */
+    margin-top: 20px;
+    width:100%
+  }
+  
+  .screen {
+    background-color: #fff; /* Color of the screen */
+    width: 80%; /* Adjust the width of the screen */
+    height: 60px; /* Adjust the height of the screen */
+    border: 2px solid #000; /* Border around the screen */
+    position: relative;
+  }
+  
+  /* Optional: Add some text or content to the screen */
+  .screen::before {
+    content: "Movie Screen";
+    display: block;
+    
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    margin-top: 10px; /* Adjust the spacing from the screen border */
+  }
+  

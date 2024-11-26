@@ -5,6 +5,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { TheatresComponent } from './components/theatres/theatres.component';
+import { BookingComponent } from './components/booking/booking.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'movies/:cityID',component:MoviesComponent},
+  {path:'theatre/:movieId', component:TheatresComponent},
+  {path:'booking', component:BookingComponent},
 ];
 
 @NgModule({

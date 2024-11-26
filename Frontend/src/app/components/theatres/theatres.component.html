@@ -1,0 +1,53 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Project-k</a>
+  
+      <!-- Date buttons -->
+      <div class="date-buttons">
+        <button
+          *ngFor="let date of dates"
+          [ngClass]="{
+            'selected-date': date === selectedDate,
+            'not-selected-date': date !== selectedDate
+          }"
+          (click)="selectDate(date)"
+        >
+          {{ date }}
+        </button>
+      </div>
+  
+      <!-- Search bar -->
+      <form class="form-inline">
+        <input class="form-control mr-2" type="search" placeholder="Search Theaters" [(ngModel)]="theaterFilter" name="theaterFilter" (input)="filterTheaters()" />
+      </form>
+    </div>
+  </nav>
+  
+  <!-- Theater listings -->
+  <div class="container mt-4">
+    <div class="theater-container">
+      <div *ngFor="let theater of filteredTheaters" class="theater-box">
+        <div class="theater-info">
+          <p>Theater Name: {{ theater.theaterName }}</p>
+          <p>Location: {{ theater.location }}</p>
+        </div>
+        <div class="screen-info">
+          <p>Screen ID: {{ theater.screenId }}</p>
+          <p>Screen Name: {{ theater.screenName }}</p>
+        </div>
+        <div class="show-times">
+          <p>Show Times:</p>
+          <div class="show-time-buttons">
+            <button
+    *ngFor="let time of showTimes"
+    class="show-time-button"
+    (click)="handleShowTimeClick(time, theater.theaterName, movieName)"
+  >
+    {{ time }}
+  </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

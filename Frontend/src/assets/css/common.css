@@ -41,8 +41,8 @@ a:hover {
 .btn {
     margin-top: 30px; /* Increase spacing */
     border-radius: 25px; /* Rounder buttons */
-    background-color: #fdd835; /* Yellow button color */
-    color: #000; /* Black text color */
+    background-color: red; /* Yellow button color */
+    color: white; /* Black text color */
     font-weight: bold; /* Make it bold */
 }
 
