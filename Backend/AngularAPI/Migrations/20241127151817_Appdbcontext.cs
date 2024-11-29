@@ -1,4 +1,5 @@
 ﻿using System;
+using AngularAPI.Context;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -206,6 +207,11 @@ namespace AngularAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "cities");
+        }
+
+        public static implicit operator Appdbcontext(AppDbContext v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

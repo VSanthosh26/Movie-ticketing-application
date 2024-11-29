@@ -10,7 +10,7 @@ export class TheatresService {
 
   constructor(private http:HttpClient) { }
 
-  getTheatersByMovie(movieId: number): Observable<any> {
+  getTheatresByMovie(movieId: number): Observable<any> {
     const url = `${this.baseUrl}/movie/${movieId}`;
     return this.http.get<any>(url);
   }

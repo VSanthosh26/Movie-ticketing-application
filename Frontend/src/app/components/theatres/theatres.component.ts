@@ -10,9 +10,9 @@ import { TheatresService } from '../../services/theatres.service';
   styleUrl: './theatres.component.css'
 })
 export class TheatresComponent implements OnInit{
-  theaters: any[] = [];
-  theaterFilter: string = '';
-  filteredTheaters: any[] = [];
+  theatres: any[] = [];
+  theatreFilter: string = '';
+  filteredTheatres: any[] = [];
   dates: string[] = [];
   selectedDate: string = moment().format('DD MMM ddd');
   showTimes: string[] = [];
@@ -23,16 +23,16 @@ export class TheatresComponent implements OnInit{
   ngOnInit(): void {
     this.generateDates();
     this.updateShowTimes();
-    this.getTheaters();
+    this.getTheatres();
   }
 
-  filterTheaters() {
-    if (this.theaterFilter) {
-      this.filteredTheaters = this.theaters.filter((theater: any) =>
-        theater.theaterName.toLowerCase().includes(this.theaterFilter.toLowerCase())
+  filterTheatres() {
+    if (this.theatreFilter) {
+      this.filteredTheatres = this.theatres.filter((theatre: any) =>
+        theatre.theatreName.toLowerCase().includes(this.theatreFilter.toLowerCase())
       );
     } else {
-      this.filteredTheaters = this.theaters; // If search input is empty, show all theaters
+      this.filteredTheatres = this.theatres; // If search input is empty, show all theatres
     }
   }
 
@@ -78,16 +78,16 @@ export class TheatresComponent implements OnInit{
     }
   }
 
-  getTheaters() {
+  getTheatres() {
     const movieIdParam = this.route.snapshot.paramMap.get('movieId');
     if (movieIdParam !== null) {
       const movieId = +movieIdParam;
       if (!isNaN(movieId)) {
-        this.theatreService.getTheatersByMovie(movieId).subscribe(
+        this.theatreService.getTheatresByMovie(movieId).subscribe(
           (data: any) => {
             if (Array.isArray(data.$values)) {
-              this.theaters = data.$values;
-              this.filteredTheaters = this.theaters;
+              this.theatres = data.$values;
+              this.filteredTheatres = this.theatres;
   
               // Fetch movie details asynchronously and set the movieName
               this.getMovieDetails(movieId);
@@ -96,7 +96,7 @@ export class TheatresComponent implements OnInit{
             }
           },
           (error) => {
-            console.error('Error fetching theaters:', error);
+            console.error('Error fetching theatres:', error);
           }
         );
       } else {
@@ -120,10 +120,10 @@ export class TheatresComponent implements OnInit{
   }
   
 
-   handleShowTimeClick(time: string, theaterName: string , movieName:string) {
-    console.log(`You  have Booked  the show  at ${theaterName}: ${time}`);
-    const queryParams = { date: this.selectedDate, time,theaterName,movieName };
-    // Navigate to the BookingComponent with the selected date, time, and theater name as parameters
+   handleShowTimeClick(time: string, theatreName: string , movieName:string) {
+    console.log(`You  have Booked  the show  at ${theatreName}: ${time}`);
+    const queryParams = { date: this.selectedDate, time,theatreName,movieName };
+    // Navigate to the BookingComponent with the selected date, time, and theatre name as parameters
     this.router.navigate(['/booking'], { queryParams });
 }
 

@@ -73,8 +73,8 @@ export class MoviesComponent implements OnInit{
     if (selectedMovie) {
       const movieName = selectedMovie.title;
       console.log(`Selected Movie ID: ${movieId}, Movie Name: ${movieName}`);
-      // You can now navigate to the theaters component with the movie ID as a parameter
-      this.router.navigate(['theaters', movieId], { queryParams: { movieName } });
+      // You can now navigate to the theatres component with the movie ID as a parameter
+      this.router.navigate(['theatres', movieId], { queryParams: { movieName } });
     } else {
       console.error(`Movie with ID ${movieId} not found.`);
     }

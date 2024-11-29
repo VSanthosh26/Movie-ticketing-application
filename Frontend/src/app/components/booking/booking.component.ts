@@ -27,7 +27,7 @@ export class BookingComponent {
   seats: Seat[] = [];
   selectedDate: string = '';
   selectedTime: string = '';
-  theaterName: string = '';
+  theatreName: string = '';
   movieName: string='';
   selectedSeatText='';
   public fullName: string = '';
@@ -65,7 +65,7 @@ export class BookingComponent {
     this.route.queryParams.subscribe((params) => {
       this.selectedDate = params['date'] || '';
       this.selectedTime = params['time'] || '';
-      this.theaterName = params['theaterName'] || '';
+      this.theatreName = params['theatreName'] || '';
       this.movieName = params['movieName'] || '';
       this.userstore.setFullNameForStore(this.auth.getfullNameFromToken());
     this.userstore.getFullNameFromStore().subscribe(val => {
@@ -73,7 +73,7 @@ export class BookingComponent {
       console.log(this.fullName)
     });
       console.log('Movie Name in BookingComponent:', this.movieName);
-      this.initializeSeats(); // Initialize seats based on theaterName if needed
+      this.initializeSeats(); // Initialize seats based on theatreName if needed
     });
   }
 
@@ -133,10 +133,10 @@ export class BookingComponent {
   }
 
   lockSeatsForSelectedDateTime(): void {
-    const selectedDateTimeId = `${this.theaterName}-${this.selectedDate}-${this.selectedTime}`;
+    const selectedDateTimeId = `${this.theatreName}-${this.selectedDate}-${this.selectedTime}`;
   
     this.seats.forEach((seat) => {
-      const seatDateTimeId = `${this.theaterName}-${seat.row}-${seat.number}`;
+      const seatDateTimeId = `${this.theatreName}-${seat.row}-${seat.number}`;
       seat.locked = seatDateTimeId === selectedDateTimeId && seat.selected;
     });
   }
@@ -252,7 +252,7 @@ export class BookingComponent {
 
         this.bookingDataService.setBookingDetails({
           movieName: this.movieName,
-          theaterName: this.theaterName,
+          theatreName: this.theatreName,
           selectedSeatsText: selectedSeatsText,
           selectedDate: this.selectedDate,
           selectedTime: this.selectedTime,
@@ -263,7 +263,7 @@ export class BookingComponent {
         this.bookingDataService.sendBookingDetailsToBackend({
           Name:this.fullName,
           movieName: this.movieName,
-          theaterName: this.theaterName,
+          theatreName: this.theatreName,
           selectedSeatsText: selectedSeatsText,
           selectedDate: this.selectedDate,
           selectedTime: this.selectedTime,

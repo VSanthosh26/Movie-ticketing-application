@@ -19,22 +19,22 @@
   
       <!-- Search bar -->
       <form class="form-inline">
-        <input class="form-control mr-2" type="search" placeholder="Search Theaters" [(ngModel)]="theaterFilter" name="theaterFilter" (input)="filterTheaters()" />
+        <input class="form-control mr-2" type="search" placeholder="Search Theatres" [(ngModel)]="theatreFilter" name="theatreFilter" (input)="filterTheatres()" />
       </form>
     </div>
   </nav>
   
-  <!-- Theater listings -->
+  <!-- Theatre listings -->
   <div class="container mt-4">
-    <div class="theater-container">
-      <div *ngFor="let theater of filteredTheaters" class="theater-box">
-        <div class="theater-info">
-          <p>Theater Name: {{ theater.theaterName }}</p>
-          <p>Location: {{ theater.location }}</p>
+    <div class="theatre-container">
+      <div *ngFor="let theatre of filteredTheatres" class="theatre-box">
+        <div class="theatre-info">
+          <p>Theatre Name: {{ theatre.theatreName }}</p>
+          <p>Location: {{ theatre.location }}</p>
         </div>
         <div class="screen-info">
-          <p>Screen ID: {{ theater.screenId }}</p>
-          <p>Screen Name: {{ theater.screenName }}</p>
+          <p>Screen ID: {{ theatre.screenId }}</p>
+          <p>Screen Name: {{ theatre.screenName }}</p>
         </div>
         <div class="show-times">
           <p>Show Times:</p>
@@ -42,7 +42,7 @@
             <button
     *ngFor="let time of showTimes"
     class="show-time-button"
-    (click)="handleShowTimeClick(time, theater.theaterName, movieName)"
+    (click)="handleShowTimeClick(time, theatre.theatreName, movieName)"
   >
     {{ time }}
   </button>

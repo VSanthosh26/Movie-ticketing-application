@@ -168,3 +168,4 @@ D:\ALL\task\Movie ticketing application\Backend\AngularAPI\obj\Debug\net8.0\refi
 D:\ALL\task\Movie ticketing application\Backend\AngularAPI\obj\Debug\net8.0\AngularAPI.pdb
 D:\ALL\task\Movie ticketing application\Backend\AngularAPI\obj\Debug\net8.0\AngularAPI.genruntimeconfig.cache
 D:\ALL\task\Movie ticketing application\Backend\AngularAPI\obj\Debug\net8.0\ref\AngularAPI.dll
+D:\ALL\task\Movie ticketing application\Backend\AngularAPI\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
