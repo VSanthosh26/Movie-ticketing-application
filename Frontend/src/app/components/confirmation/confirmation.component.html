@@ -1,0 +1,25 @@
+<div class="container mt-4 ">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Booking Confirmation</h2>
+        
+        <div class="confirmation-details">
+          <h4>Thank you for booking your tickets!</h4>
+          
+          <div class="details">
+            <p><strong>Movie Name:</strong> {{ movieName }}</p>
+            <p><strong>Theater Name:</strong> {{ theaterName }}</p>
+            <p><strong>Date:</strong> {{ selectedDate }}</p>
+            <p><strong>Time:</strong> {{ selectedTime }}</p>
+            
+            <p><strong>Selected Seats:</strong>{{selectedSeatsText}}</p>
+            
+            
+            <p class="mt-3"><strong>Total Fare:</strong>  &#8377;{{ totalFare.toFixed(2) }}</p>
+  
+            <button class="btn btn-primary" (click)="printConfirmation()">Print Confirmation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

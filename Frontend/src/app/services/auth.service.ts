@@ -21,6 +21,10 @@ export class AuthService {
     this.router.navigate(['login']);
   }
 
+  signIn(loginObj : any){
+    return this.http.post<any>(`${this.baseUrl}authenticate`,loginObj)
+  }
+  
   login(loginObj: any) {
     return this.http.post<any>(`${this.baseUrl}authenticate`, loginObj);
   }
@@ -31,6 +35,10 @@ export class AuthService {
 
   getToken() {
     return localStorage.getItem('token');
+  }
+
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('token');
   }
 
   decodedToken(){

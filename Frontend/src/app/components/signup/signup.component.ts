@@ -43,7 +43,7 @@ export class SignupComponent implements OnInit {
       this.auth.signUp(this.signUpForm.value).subscribe({
         next: (res) => {
           //alert(res.message)
-          this.toast.success(res.toString(),"User Added",5000);
+          this.toast.success("Successful registered","User Added",5000);
           this.signUpForm.reset();
           this.router.navigate(['login']);
         },

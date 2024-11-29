@@ -19,6 +19,7 @@ import { TheatresComponent } from './components/theatres/theatres.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { TheatresService } from './services/theatres.service';
 import { BookingService } from './services/booking.service';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { BookingService } from './services/booking.service';
     DashboardComponent,
     MoviesComponent,
     TheatresComponent,
-    BookingComponent
+    BookingComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
