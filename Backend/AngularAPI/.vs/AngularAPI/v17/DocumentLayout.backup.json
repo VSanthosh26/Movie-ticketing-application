@@ -3,28 +3,72 @@
   "WorkspaceRootPath": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.movies.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__ProjectModels/BookMyShow/True/SqlTable/dbo.movies.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\seatingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\seatingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\seating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\seating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.cities.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\screens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\screens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\screenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\screenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\theatrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\theatrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__ProjectModels/BookMyShow/True/SqlTable/dbo.cities.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.movies.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,14 +83,6 @@
       "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\theatre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\seating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\seating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\screens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\screens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -57,22 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|d:\\all\\task\\movie ticketing application\\backend\\angularapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A06F96-4F1F-49D1-B81D-F6E522FAE84F}|AngularAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.Screens.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -112,242 +132,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "dbo.cities [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.cities.sql",
-              "ToolTip": "dbo.cities [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-29T12:52:08.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dbo.cities [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/BookMyShow/True/SqlTable/dbo.cities.sql",
-              "ToolTip": "dbo.cities [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-29T12:51:58.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.movies [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/BookMyShow/True/SqlTable/dbo.movies.sql",
-              "ToolTip": "dbo.movies [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-29T12:48:31.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.movies [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.movies.sql",
-              "ToolTip": "dbo.movies [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-29T12:24:07.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "Controllers\\MovieController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAANAAAAAAAAAA==",
+              "Title": "CityController.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\CityController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CityController.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\CityController.cs",
+              "RelativeToolTip": "Controllers\\CityController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAIwBQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T12:05:34.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Screens.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Screens.cs",
-              "RelativeDocumentMoniker": "Models\\Screens.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Screens.cs",
-              "RelativeToolTip": "Models\\Screens.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:54:09.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Movie.cs",
-              "RelativeDocumentMoniker": "Models\\Movie.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Movie.cs",
-              "RelativeToolTip": "Models\\Movie.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:25:28.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "Models\\Booking.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Booking.cs",
-              "RelativeToolTip": "Models\\Booking.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T11:09:24.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "City.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\City.cs",
-              "RelativeDocumentMoniker": "Models\\City.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\City.cs",
-              "RelativeToolTip": "Models\\City.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:23:05.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Seating.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Seating.cs",
-              "RelativeDocumentMoniker": "Models\\Seating.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Seating.cs",
-              "RelativeToolTip": "Models\\Seating.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T14:01:54.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:05:42.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAswIgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:16:35.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T12:56:55.018Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "20241129120930_MovieUpdated.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129120930_MovieUpdated.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241129120930_MovieUpdated.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129120930_MovieUpdated.cs",
-              "RelativeToolTip": "Migrations\\20241129120930_MovieUpdated.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ScreensController.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\ScreensController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ScreensController.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\ScreensController.cs",
+              "RelativeToolTip": "Controllers\\ScreensController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T12:09:30.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T13:44:29.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Theatre.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Theatre.cs",
-              "RelativeDocumentMoniker": "Models\\Theatre.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Theatre.cs",
-              "RelativeToolTip": "Models\\Theatre.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA2wAsAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:56:07.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-29T11:55:24.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Helpers\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "Helpers\\PasswordHasher.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Helpers\\PasswordHasher.cs",
-              "RelativeToolTip": "Helpers\\PasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T09:10:53.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "20241129092711_UserUpdated.cs",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129092711_UserUpdated.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241129092711_UserUpdated.cs",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129092711_UserUpdated.cs",
-              "RelativeToolTip": "Migrations\\20241129092711_UserUpdated.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T09:27:12.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T11:35:14.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-27T11:38:07.737Z"
+              "DocumentIndex": 3,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Controllers\\MovieController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T12:05:34.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Context\\AppDbContext.cs",
@@ -359,7 +196,236 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-27T11:38:07.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAIAwwJYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:16:35.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Seating.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Seating.cs",
+              "RelativeDocumentMoniker": "Models\\Seating.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Seating.cs",
+              "RelativeToolTip": "Models\\Seating.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:01:54.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Helpers\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Helpers\\PasswordHasher.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Helpers\\PasswordHasher.cs",
+              "RelativeToolTip": "Helpers\\PasswordHasher.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvykAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:10:53.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TheatreController.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\TheatreController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TheatreController.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\TheatreController.cs",
+              "RelativeToolTip": "Controllers\\TheatreController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowD0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T13:29:41.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SeatingController.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\SeatingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SeatingController.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\SeatingController.cs",
+              "RelativeToolTip": "Controllers\\SeatingController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswIMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T13:52:41.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-29T15:37:49.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dbo.cities.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.cities.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.cities.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-29T15:01:51.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Screens.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Screens.cs",
+              "RelativeDocumentMoniker": "Models\\Screens.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Screens.cs",
+              "RelativeToolTip": "Models\\Screens.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:54:09.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingController.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Controllers\\BookingController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T13:50:37.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "dbo.movies.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.movies.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.movies.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-29T12:24:07.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "Models\\Movie.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Movie.cs",
+              "RelativeToolTip": "Models\\Movie.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:25:28.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T11:09:24.618Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "City.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\City.cs",
+              "RelativeDocumentMoniker": "Models\\City.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\City.cs",
+              "RelativeToolTip": "Models\\City.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:23:05.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "dbo.cities.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/BookMyShow/True/SqlTable/dbo.cities.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/BookMyShow/True/SqlTable/dbo.cities.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-29T12:51:58.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:05:42.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20241129120930_MovieUpdated.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129120930_MovieUpdated.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241129120930_MovieUpdated.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129120930_MovieUpdated.cs",
+              "RelativeToolTip": "Migrations\\20241129120930_MovieUpdated.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T12:09:30.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Theatre.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Theatre.cs",
+              "RelativeDocumentMoniker": "Models\\Theatre.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Models\\Theatre.cs",
+              "RelativeToolTip": "Models\\Theatre.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:56:07.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-29T11:55:24.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20241129092711_UserUpdated.cs",
+              "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129092711_UserUpdated.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241129092711_UserUpdated.cs",
+              "ToolTip": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241129092711_UserUpdated.cs",
+              "RelativeToolTip": "Migrations\\20241129092711_UserUpdated.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:27:12.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "dbo.Screens.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.Screens.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.Screens.sql",
@@ -368,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "dbo.BookingInfo.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.BookingInfo.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_BNQVRRM_SQLEXPRESS/MovieTicketApp/True/SqlTable/dbo.BookingInfo.sql",
@@ -377,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "20241127151817_Appdbcontext.cs",
               "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241127151817_Appdbcontext.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127151817_Appdbcontext.cs",
@@ -389,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": ".gitignore.txt",
               "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\.gitignore.txt",
               "RelativeDocumentMoniker": ".gitignore.txt",
@@ -401,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "20241127124958_Appdbcontext_update2.cs",
               "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\Migrations\\20241127124958_Appdbcontext_update2.cs",
               "RelativeDocumentMoniker": "Migrations\\20241127124958_Appdbcontext_update2.cs",
@@ -412,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "AngularAPI.csproj",
               "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\AngularAPI.csproj",
               "RelativeDocumentMoniker": "AngularAPI.csproj",
@@ -424,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "AngularAPI",
               "DocumentMoniker": "D:\\ALL\\task\\Movie ticketing application\\Backend\\AngularAPI\\AngularAPI.csproj",
               "RelativeDocumentMoniker": "AngularAPI.csproj",

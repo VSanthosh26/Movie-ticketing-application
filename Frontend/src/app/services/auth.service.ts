@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { UserStoreService } from './user-store.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,9 @@ export class AuthService {
 
   private baseUrl: string = "https://localhost:44348/api/User/";
   private userPayload:any;
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router,private userStore:UserStoreService) {
+    this.userPayload = this.decodedToken();
+   }
 
   signUp(userObj:any){
     return this.http.post(`${this.baseUrl}register`,userObj);

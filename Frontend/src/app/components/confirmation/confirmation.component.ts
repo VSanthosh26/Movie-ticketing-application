@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BookingDataService } from '../../services/booking-data.service';
+import { BookingService } from '../../services/booking.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -10,21 +10,21 @@ import { BookingDataService } from '../../services/booking-data.service';
 export class ConfirmationComponent implements OnInit{
   
   movieName: string = ''; // Declare movieName property
-  theaterName: string = ''; // Declare theaterName property
+  theatreName: string = ''; // Declare theatreName property
   selectedDate: string = ''; // Declare selectedDate property
   selectedTime: string = ''; // Declare selectedTime property
   selectedSeatsText: string = ''; // Declare selectedSeats property
   totalFare: number = 0; // Declare totalFare property
   bookingDetails: any;
 
-  constructor(private route:ActivatedRoute,private router:Router,private bookingDataService:BookingDataService){
+  constructor(private route:ActivatedRoute,private router:Router,private bookingDataService:BookingService){
   }
   ngOnInit(): void {
     // Subscribe to the booking details
     this.bookingDataService.bookingDetails$.subscribe((details) => {
       // Assign values to the properties
       this.movieName = details.movieName
-      this.theaterName = details.theaterName;
+      this.theatreName = details.theatreName;
       this.selectedDate = details.selectedDate;
       this.selectedTime = details.selectedTime;
       this.selectedSeatsText = details.selectedSeatsText;

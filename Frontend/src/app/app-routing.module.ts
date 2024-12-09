@@ -8,6 +8,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { TheatresComponent } from './components/theatres/theatres.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { authGuard } from './guards/auth.guard';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {path:'theatre/:movieId', component:TheatresComponent},
   {path:'booking', component:BookingComponent},
-
+  {path:'confirmation',component:ConfirmationComponent}
 ];
 
 @NgModule({

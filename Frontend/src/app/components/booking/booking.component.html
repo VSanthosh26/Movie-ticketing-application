@@ -24,7 +24,7 @@
       <h3>Premium Sofa - (220)</h3>
       <div *ngFor="let row of ['A', 'B', 'C']" class="row">
         <div *ngFor="let seat of getSeats(sections[0], row)" class="seat" (click)="toggleSeat(sections[0].name, row, seat)" [ngClass]="{'selected': isSelected(sections[0].name, row, seat)}">
-          {{ row }}-{{ seat }}  
+         {{ row }}-{{ seat }}  
         </div>
       </div>
     </div>

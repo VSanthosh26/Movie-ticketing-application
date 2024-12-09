@@ -1,5 +1,6 @@
 /* Styles for the movie cards */
-.outer{
+.outter{
+  height: 100vh;
   background-color: lavender;
 }
 .card {

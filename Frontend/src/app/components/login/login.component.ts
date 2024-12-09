@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
           alert(res.message);
           this.auth.storeToken(res.token);
           this.loginForm.reset();
-          this.toast.success("Enjoy watching the movies with Moviemate","Login Success",5000);
+          this.toast.success("Enjoy watching the movies with BookMyShow","Login Success",5000);
           this.router.navigate(['dashboard']);
         },
         error: (err) => {

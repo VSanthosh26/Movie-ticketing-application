@@ -131,7 +131,7 @@ namespace AngularAPI.Controllers
         private string CreateJwt(User user)
         {
             var jwtTokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("secretPassword");
+            var key = Encoding.ASCII.GetBytes("this is my custom Secret key for authentication");
             var identity = new ClaimsIdentity(new Claim[]
             {
                 new Claim(ClaimTypes.Role, user.Role),
@@ -146,8 +146,17 @@ namespace AngularAPI.Controllers
                 Expires = DateTime.Now.AddDays(1),
                 SigningCredentials = Credentials
             };
-            var token = jwtTokenHandler.CreateToken(tokenDescriptor);
-            return jwtTokenHandler.WriteToken(token);
+            try
+            {
+                var token = jwtTokenHandler.CreateToken(tokenDescriptor);
+                return jwtTokenHandler.WriteToken(token);
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+
+            ;
         }
 
 

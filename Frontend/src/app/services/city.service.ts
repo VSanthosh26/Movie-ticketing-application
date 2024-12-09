@@ -9,7 +9,7 @@ export class CityService {
   constructor(private http:HttpClient) { }
 
    //  API endpoint to fetch city names from the backend
-   private cityApiUrl = 'https://localhost:44348/api/cities/';
+   private cityApiUrl = 'https://localhost:44348/api/city/';
 
    // Fetch city names
    getCities() {
