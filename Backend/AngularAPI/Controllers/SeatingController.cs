@@ -130,5 +130,56 @@ namespace AngularAPI.Controllers
         {
             return _context.Seating.Any(e => e.SeatId == id);
         }
+
+        [HttpGet("bookedseats")]
+        public ActionResult<List<string>> GetBookedSeats(
+        [FromQuery] string theatreName,
+        [FromQuery] string movieName,
+        [FromQuery] string selectedDate,
+        [FromQuery] string selectedTime)
+        {
+            try
+            {
+                // Query bookings with matching criteria
+                var bookedSeats = _context.Bookings
+                    .Where(b => b.TheatreName == theatreName &&
+                                b.MovieName == movieName &&
+                                b.SelectedDate == selectedDate &&
+                                b.SelectedTime == selectedTime)
+                    .Select(b => b.SelectedSeatsText)
+                    .ToList();
+
+                // Parse selected seats text and create a list of booked seat keys
+                var allBookedSeats = bookedSeats
+                    .SelectMany(seatText => ParseSelectedSeats(seatText))
+                    .ToList();
+
+                return Ok(allBookedSeats);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error retrieving booked seats: {ex.Message}");
+            }
+        }
+
+        private List<string> ParseSelectedSeats(string selectedSeatsText)
+        {
+            // Parse the selected seats text into individual seat keys
+            return selectedSeatsText
+                .Split('\n')
+                .SelectMany(sectionSeats =>
+                {
+                    var parts = sectionSeats.Split(':');
+                    if (parts.Length == 2)
+                    {
+                        var section = parts[0].Trim();
+                        return parts[1].Split(',')
+                            .Select(seat => seat.Trim())
+                            .Select(seat => $"{section}-{seat}");
+                    }
+                    return Enumerable.Empty<string>();
+                })
+                .ToList();
+        }
     }
 }

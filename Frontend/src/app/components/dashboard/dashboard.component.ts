@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit{
   cityFilter: string = '';
   public users: any[] = [];
   public fullName: string = '';
+  cityObject: { Cityname: any; selectedCityID: any; } | undefined;
   
  
   constructor(private auth:AuthService,
@@ -51,6 +52,13 @@ export class DashboardComponent implements OnInit{
     this.selectedCity = city.cityName;
 
     this.userstore.setFullNameForStore(this.auth.getfullNameFromToken());
+
+    this.userstore.setFullNameForStore(this.auth.getfullNameFromToken());
+    this.cityObject={
+      Cityname :this.selectedCity,
+      selectedCityID:this.selectedCityID
+    }
+    this.cityService.setCityForStore(this.cityObject);
     
     // Use the Angular router to navigate to the "movies" route with the selected city as a parameter
     this.router.navigate(['/movies', this.selectedCityID],{

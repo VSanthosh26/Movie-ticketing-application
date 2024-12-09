@@ -34,8 +34,29 @@
     font-size: 24px;
     font-weight: bold;
   }
-  
+
   .proceed-button {
+    text-align: right;
+    background-color: #ff5252;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .proceed-button:disabled {
+    text-align: right;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: not-allowed;
+  }
+  
+  /* .proceed-button {
     text-align: right;
     button {
       background-color: #ff5252;
@@ -50,7 +71,18 @@
       background-color: #ccc;
       cursor: not-allowed;
     }
-  }
+  } */
+
+  .cancel-button{
+    text-align: right;
+    background-color: #ff5252;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
   
   .seat-legend {
     h3 {
@@ -100,18 +132,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b2dfdb;
     width: 40px;
     height: 40px;
     margin: 7px;
     border-radius: 5px;
     cursor: pointer;
     white-space: nowrap;
-    &.selected {
-      background-color: #ff5252;
-    }
   }
   
+  .seat.available {
+    background-color: #b2dfdb; /* Light blue for available seats */
+    color: black;
+  }
+  
+  .seat.booked {
+    background-color: #4CAF50; /* Green for booked seats */
+    color: white;
+    cursor: not-allowed;
+  }
+  
+  .seat.selected {
+    background-color: #ff5252; /* Red for selected seats */
+    color: white;
+  }
+
   .screen-container {
     display: flex;
     justify-content: center;

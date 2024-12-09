@@ -34,10 +34,8 @@ export class ConfirmationComponent implements OnInit{
     });
   }
 
-  printConfirmation() {
-    window.print();
-    this.router.navigate(['/dashboard']);
-    
+  backToDashboard() {
+    this.router.navigate(['/dashboard']);   
   }
 
 }

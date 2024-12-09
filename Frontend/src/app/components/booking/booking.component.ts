@@ -4,14 +4,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { UserStoreService } from '../../services/user-store.service';
 import { BookingService } from '../../services/booking.service';
+import { CityService } from '../../services/city.service';
+import { SeatingService } from '../../services/seating.service';
 
 
 interface Seat {
   section: string;
   row: string;
   number: number;
-  selected: boolean;
-  locked: boolean;
+  status: 'available' | 'booked' | 'selected';
+  price: number;
   
 }
 
@@ -31,6 +33,8 @@ export class BookingComponent {
   movieName: string='';
   selectedSeatText='';
   public fullName: string = '';
+  selectedcityName: string | null = null;
+  selectedCityId:string | null = null;
 
   sections: any[] = [
     {
@@ -59,8 +63,8 @@ export class BookingComponent {
     }
   ];
 
-  constructor(private theatreService:TheatresService,private route:ActivatedRoute,private router:Router,private auth:AuthService,private userstore:UserStoreService,private bookingDataService:BookingService){
-    this.initializeSeats();
+  constructor(private theatreService:TheatresService,private route:ActivatedRoute,private router:Router,private auth:AuthService,private userstore:UserStoreService,private bookingDataService:BookingService,private cityService:CityService,private seatingService:SeatingService){
+    this.loadSeats();
     // Initialize seats based on sections
     this.route.queryParams.subscribe((params) => {
       this.selectedDate = params['date'] || '';
@@ -73,83 +77,86 @@ export class BookingComponent {
       console.log(this.fullName)
     });
       console.log('Movie Name in BookingComponent:', this.movieName);
-      this.initializeSeats(); // Initialize seats based on theatreName if needed
+       // Initialize seats based on theatreName if needed
     });
   }
 
-  initializeSeats() {
-    this.clearLocalStorage(); // Clear stored seats before initialization
- const seatsFromStorage = localStorage.getItem('selectedSeats');
-   
-   if (seatsFromStorage) {
+  ngOnInit(): void {
+    this.loadSeats();
+    this.cityService.getCityFromStore().subscribe(val=>{
+      this.selectedcityName=val.Cityname,
+      console.log("this is city name=",val.Cityname);
+      this.selectedCityId=val.selectedCityID,
+      console.log("this is cityId=",val.selectedCityID);},
+    );
+  }
+
+  loadSeats() {
+    // Fetch booked seats from backend
+    this.seatingService.getBookedSeats(this.theatreName, this.movieName, this.selectedDate, this.selectedTime)
+      .subscribe(
+        (bookedSeats) => {
+          console.log('Booked Seats Type:', typeof bookedSeats);
+          console.log('Booked Seats:', bookedSeats);
+          this.initializeSeats(bookedSeats);
+        },
+        (error) => {
+          console.error('this is block is reaching')
+          console.error('Error fetching booked seats', error);
+          this.initializeSeats([]);
+        }
+      );
+  }
+
+  initializeSeats(bookedSeats:any) {
+    this.seats=[];
+    const bookedArray= bookedSeats?.$values;
+    const bookedSeatsArray = Array.isArray(bookedArray) ? bookedArray : [];
+    const seatsFromStorage = localStorage.getItem('selectedSeats');
+      
+    if (seatsFromStorage) {
      // If seats are found in localStorage, use them
      this.seats = JSON.parse(seatsFromStorage);
-   } else {
+    } else {
      // Otherwise, initialize seats based on sections
      this.sections.forEach((section) => {
-       section.rows.forEach((row: string) => {
-         for (let i = 1; i <= section.totalSeats; i++) {
-           this.seats.push({
-             section: section.name,
-             row: row,
-             number: i,
-             selected: false,
-             locked: false
-           });
-         }
-       });
-     });
+      section.rows.forEach((row: string) => {
+        const seatsInRow = this.getSeats(section, row);
+        seatsInRow.forEach((seatNumber) => {
+          const seatKey = `${section.name}-${section.name}-${row}-${seatNumber}`;
+          const seatStatus = bookedSeatsArray.some(seat => seat === seatKey) ? 'booked' : 'available';
+          this.seats.push({
+            section: section.name,
+            row: row,
+            number: seatNumber,
+            status: seatStatus,
+            price: section.price
+          });
+        });
+      });
+    });
    }
  }
 
- clearLocalStorage() {
-  localStorage.removeItem('selectedSeats');
+ cancelBooking(){
+  this.router.navigate(['/movies', this.selectedCityId],{
+    queryParams: { fullName: this.fullName, City:this.selectedcityName }
+  });
 }
+
+  clearLocalStorage() {
+    localStorage.removeItem('selectedSeats');
+  }
 
   updateLocalStorage() {
     localStorage.setItem('selectedSeats', JSON.stringify(this.seats));
   }
 
-  lockSelectedSeats() {
-    this.seats
-      .filter((seat) => seat.selected)
-      .forEach((seat) => {
-        seat.locked = true;
-      });
-  }
-
-  unlockSeats() {
-    this.seats.forEach((seat) => {
-      seat.locked = false;
-    });
-    this.updateLocalStorage();
-  }
-
   onNumTicketsChange(event: any): void {
     this.numTickets = parseInt(event, 10); // Parse the event value to an integer
-    this.clearSelectedSeats();
     this.updateTotalFare();
-    this.lockSeatsForSelectedDateTime();
   }
 
-  lockSeatsForSelectedDateTime(): void {
-    const selectedDateTimeId = `${this.theatreName}-${this.selectedDate}-${this.selectedTime}`;
-  
-    this.seats.forEach((seat) => {
-      const seatDateTimeId = `${this.theatreName}-${seat.row}-${seat.number}`;
-      seat.locked = seatDateTimeId === selectedDateTimeId && seat.selected;
-    });
-  }
-
-  clearSelectedSeats(): void {
-    this.selectedSeatsCount = 0;
-    this.seats.forEach((seat) => {
-      if (!seat.locked) {
-        seat.selected = false;
-      }
-    });
-    this.updateLocalStorage();
-  }
 
   getSeats(section: any, row: string): number[] {
     if (section.name === 'Premium Sofa') {
@@ -178,13 +185,17 @@ export class BookingComponent {
     return [];
   }
   
+  getSeatClass(sectionName: string, row: string, seatNumber: number): string {
+    const seat = this.seats.find(s => s.section === sectionName && s.row === row && s.number === seatNumber);
   
-  isSelected(section: string, row: string, number: number): boolean {
-    const seat = this.seats.find(
-      (s) => s.section === section && s.row === row && s.number === number
-    );
-
-    return seat ? seat.selected : false;
+    if (seat?.status === 'available') {
+      return 'available';
+    } else if (seat?.status === 'booked') {
+      return 'booked';
+    } else if (seat?.status === 'selected') {
+      return 'selected';
+    }
+    return '';
   }
 
 
@@ -195,54 +206,39 @@ export class BookingComponent {
     );
   
     if (selectedSeat && this.numTickets !== null) {
-      if (!selectedSeat.locked) { // Check if the seat is not locked
-        if (selectedSeat.selected) {
-          // Deselect the seat
-          selectedSeat.selected = false;
-          this.selectedSeatsCount--;
-        } else if (this.selectedSeatsCount < this.numTickets) {
-          // Check if the user can select more seats
-          selectedSeat.selected = true;
-          this.selectedSeatsCount++;
-        }
+      if (selectedSeat.status === 'available' && this.selectedSeatsCount < this.numTickets) {
+        selectedSeat.status = 'selected';
+        this.selectedSeatsCount++;
+        this.updateTotalFare();
+      } else if (selectedSeat.status === 'selected') {
+        selectedSeat.status = 'available';
+        this.selectedSeatsCount--;
         this.updateTotalFare();
       }
     }
   }
-  numSelectedSeats(): number {
-    // Implement logic to count the number of selected seats
-    return this.seats.filter((seat) => seat.selected).length;
-  }
+
   updateTotalFare(): void {
-    let totalFare = 0;
-    this.seats.filter((seat) => seat.selected).forEach((seat) => {
-      const section = this.sections.find((s) => s.name === seat.section);
-      if (section) {
-        totalFare += section.price;
-      }
-    });
-    this.totalFare = totalFare;
+    this.totalFare = this.seats
+    .filter((seat) => seat.status === 'selected')
+    .reduce((total, seat) => total + seat.price, 0);
   }
 
   isProceedButtonEnabled(): boolean {
-    return this.numSelectedSeats() === this.numTickets;
+    return this.selectedSeatsCount === this.numTickets; 
   }
     proceedBooking(): void {
+      const selectedSeats = this.seats.filter((seat) => seat.status === 'selected');
       const selectedSeatsBySection: { [section: string]: string[] } = {};
       const totalFare = this.totalFare;
-      this.lockSelectedSeats();
 
-      
-
-      for (const seat of this.seats) {
-        if (seat.selected) {
-          const seatIdentifier = `${seat.row}-${seat.number}`;
-          if (!selectedSeatsBySection[seat.section]) {
-            selectedSeatsBySection[seat.section] = [];
-          }
-          selectedSeatsBySection[seat.section].push(seatIdentifier);
+      selectedSeats.forEach((seat) => {
+        const seatKey = `${seat.section}-${seat.row}-${seat.number}`;
+        if (!selectedSeatsBySection[seat.section]) {
+          selectedSeatsBySection[seat.section] = [];
         }
-      }
+        selectedSeatsBySection[seat.section].push(seatKey);
+      }); 
 
       const selectedSeatsText = Object.entries(selectedSeatsBySection)
         .map(([section, seats]) => `${section}: ${seats.join(', ')}`)
@@ -272,7 +268,6 @@ export class BookingComponent {
         }).subscribe(
           (response) => {
             console.log('Booking details sent to the backend successfully', response);
-            // Optionally, you can navigate to the confirmation page here
             this.router.navigate(['/confirmation']);
           },
           (error) => {

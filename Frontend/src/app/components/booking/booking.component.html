@@ -18,43 +18,24 @@
       <button  class="proceed-button"(click)="proceedBooking()"[disabled]="!isProceedButtonEnabled()">
       Proceed
      </button>
+     <button class="cancel-button" (click)="cancelBooking()">Cancel Booking</button>
     </nav>
   
-    <div class="section">
-      <h3>Premium Sofa - (220)</h3>
-      <div *ngFor="let row of ['A', 'B', 'C']" class="row">
-        <div *ngFor="let seat of getSeats(sections[0], row)" class="seat" (click)="toggleSeat(sections[0].name, row, seat)" [ngClass]="{'selected': isSelected(sections[0].name, row, seat)}">
-         {{ row }}-{{ seat }}  
+    <div class="section" *ngFor="let section of sections">
+      <h3>{{ section.name }} - ({{ section.price }})</h3>
+      <div *ngFor="let row of section.rows" class="row">
+        {{ row }}
+        <div 
+          *ngFor="let seatNumber of getSeats(section, row)" 
+          class="seat" 
+          [ngClass]="getSeatClass(section.name, row, seatNumber)"
+          (click)="toggleSeat(section.name, row, seatNumber)"
+        >
+          {{ seatNumber }}
         </div>
       </div>
     </div>
-  
-    <div class="section">
-      <h3>Premium Balcony - (175)</h3>
-      <div *ngFor="let row of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']" class="row">
-        <div *ngFor="let seat of getSeats(sections[1], row)" class="seat" (click)="toggleSeat(sections[1].name, row, seat)" [ngClass]="{'selected': isSelected(sections[1].name, row, seat)}">
-          {{ row }}-{{ seat }}
-        </div>
-      </div>
-    </div>
-  
-    <div class="section">
-      <h3>Premium First Class - (140)</h3>
-      <div *ngFor="let row of ['A', 'B', 'C', 'D', 'E', 'F']" class="row">
-        <div *ngFor="let seat of getSeats(sections[2], row)" class="seat" (click)="toggleSeat(sections[2].name, row, seat)" [ngClass]="{'selected': isSelected(sections[2].name, row, seat)}">
-          {{ row }}-{{ seat }}
-        </div>
-      </div>
-    </div>
-  
-    <div class="section">
-      <h3>Non-Premium SE - (90)</h3>
-      <div *ngFor="let row of ['A', 'B', 'C', 'D', 'E']" class="row">
-        <div *ngFor="let seat of getSeats(sections[3], row)" class="seat" (click)="toggleSeat(sections[3].name, row, seat)" [ngClass]="{'selected': isSelected(sections[3].name, row, seat)}">
-          {{ row }}-{{ seat }}
-        </div>
-      </div>
-    </div>
+    
     <div class="screen-container">
       <div class="screen"></div>
     </div>
