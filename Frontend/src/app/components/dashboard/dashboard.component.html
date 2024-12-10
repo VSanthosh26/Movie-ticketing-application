@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">BookMyShow</a>
+      <a class="navbar-brand" href="/dashboard">BookMyShow</a>
   
       <!-- Search bar -->
       <form class="form-inline">
@@ -11,7 +11,7 @@
       <div class="navbar-text">
         <span class="welcome-text">Welcome, {{fullName}} </span>
       </div>
-  
+      <button class="btn btn-danger ml-auto" routerLink="/bookingHistory">Booking History</button>
       <button (click)="logout()" class="btn btn-danger ml-auto">Log Out</button>
     </div>
   </nav>

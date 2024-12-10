@@ -55,4 +55,15 @@ export class AuthService {
     if(this.userPayload)
     return this.userPayload.unique_name;
   }
+
+  getUserIdFromToken(): number | null {
+    const jwtHelper = new JwtHelperService();
+    const token = this.getToken();
+    if (token) {
+      const decodedToken = jwtHelper.decodeToken(token);
+      console.log('Decoded Token:', decodedToken);
+      return decodedToken ? parseInt(decodedToken['UserId'], 10) : null;
+    }
+    return null;
+  }
 }

@@ -26,13 +26,14 @@
                                 <small *ngIf="signUpForm.controls['lastName'].dirty && signUpForm.hasError('required','lastName')" class="text-danger">*Last name is required</small>
                                     </div>
                                 <div class="form-group pt-3">
-                                    <div class="input-field"[class.error]="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">
+                                    <div class="input-field"[class.error]="signUpForm.controls['email'].dirty && signUpForm.controls['email'].hasError('required') || signUpForm.controls['email'].dirty && signUpForm.controls['email'].hasError('email')">
                                         <span class="fa fa-envelope p-2"></span>
                                         <input type="email" placeholder="Email" formControlName="email">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')" class="text-danger">*Email name is required</small>
+                                <div class="col-md-8">
+                                <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.controls['email'].hasError('required')" class="text-danger">*Email name is required</small>
+                                <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.controls['email'].hasError('email')" class="text-danger">*Please enter a valid email address</small>
                                     </div>
                                 <div class="form-group pt-3">
                                     <div class="input-field" [class.error]="signUpForm.controls['userName'].dirty && signUpForm.hasError('required','userName')">

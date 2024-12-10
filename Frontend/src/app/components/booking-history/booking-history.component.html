@@ -1,0 +1,18 @@
+<div class="dashboard-container">
+    <h2 class="head">My Booking History</h2>
+    
+    <div *ngIf="bookings.length === 0" class="no-bookings">
+      You have no booking history.
+    </div>
+  
+    <div *ngFor="let booking of bookings" class="booking-card">
+      <div class="booking-details">
+        <h3>{{ booking.movieName }}</h3>
+        <p><strong>Theatre:</strong> {{ booking.theatreName }}</p>
+        <p><strong>Date:</strong> {{ booking.selectedDate }}</p>
+        <p><strong>Time:</strong> {{ booking.selectedTime }}</p>
+        <p><strong>Seats:</strong> {{ booking.selectedSeatsText }}</p>
+        <p><strong>Total Fare:</strong> &#8377;{{ booking.totalFare }}</p>
+      </div>
+    </div>
+</div>

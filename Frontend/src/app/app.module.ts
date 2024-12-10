@@ -20,6 +20,7 @@ import { BookingComponent } from './components/booking/booking.component';
 import { TheatresService } from './services/theatres.service';
 import { BookingService } from './services/booking.service';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     MoviesComponent,
     TheatresComponent,
     BookingComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    BookingHistoryComponent
   ],
   imports: [
     BrowserModule,

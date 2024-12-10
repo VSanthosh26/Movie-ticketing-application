@@ -9,6 +9,7 @@ import { TheatresComponent } from './components/theatres/theatres.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { authGuard } from './guards/auth.guard';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'login',component:LoginComponent},
   {path:'dashboard',component:DashboardComponent, canActivate:[authGuard]},
+  {path:'bookingHistory', component:BookingHistoryComponent},
   {path:'movies/:cityID',component:MoviesComponent},
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {path:'theatre/:movieId', component:TheatresComponent},

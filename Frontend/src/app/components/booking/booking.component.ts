@@ -35,6 +35,7 @@ export class BookingComponent {
   public fullName: string = '';
   selectedcityName: string | null = null;
   selectedCityId:string | null = null;
+  userId: number | null = null;
 
   sections: any[] = [
     {
@@ -83,6 +84,7 @@ export class BookingComponent {
 
   ngOnInit(): void {
     this.loadSeats();
+    this.userId=this.auth.getUserIdFromToken();
     this.cityService.getCityFromStore().subscribe(val=>{
       this.selectedcityName=val.Cityname,
       console.log("this is city name=",val.Cityname);
@@ -253,7 +255,8 @@ export class BookingComponent {
           selectedDate: this.selectedDate,
           selectedTime: this.selectedTime,
           totalFare: totalFare,
-          fullName:this.fullName
+          fullName:this.fullName,
+          UserId:this.userId
         });
 
         this.bookingDataService.sendBookingDetailsToBackend({
@@ -264,7 +267,7 @@ export class BookingComponent {
           selectedDate: this.selectedDate,
           selectedTime: this.selectedTime,
           totalFare: totalFare,
-          
+          UserId:this.userId
         }).subscribe(
           (response) => {
             console.log('Booking details sent to the backend successfully', response);
