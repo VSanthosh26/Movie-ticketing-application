@@ -157,6 +157,7 @@ export class BookingComponent {
   onNumTicketsChange(event: any): void {
     this.numTickets = parseInt(event, 10); // Parse the event value to an integer
     this.updateTotalFare();
+    this.resetSeatSelection();
   }
 
 
@@ -203,21 +204,85 @@ export class BookingComponent {
 
   
   toggleSeat(section: string, row: string, number: number): void {
-    const selectedSeat = this.seats.find(
+    if (this.numTickets === null) {
+      alert('Please select the number of tickets first');
+      return;
+    }
+
+    const clickedSeat = this.seats.find(
       (s) => s.section === section && s.row === row && s.number === number
     );
-  
-    if (selectedSeat && this.numTickets !== null) {
-      if (selectedSeat.status === 'available' && this.selectedSeatsCount < this.numTickets) {
-        selectedSeat.status = 'selected';
+
+    if (!clickedSeat || clickedSeat.status === 'booked') return;
+
+
+    // If all required seats are already selected, reset previous selection
+    if (this.selectedSeatsCount === this.numTickets) {
+      this.resetSeatSelection();
+    }
+
+    const selectedSeats = this.selectConsecutiveSeats(section, row, number);
+
+    
+    this.updateTotalFare();
+  }
+
+  selectConsecutiveSeats(section: string, row: string, startNumber: number): Seat[] {
+
+    if (this.numTickets === null) {
+      return [];
+    }
+    
+    const selectedSeats: Seat[] = [];
+    const sectionSeats = this.seats.filter(
+      s => s.section === section && s.row === row
+    );
+
+    // Sort seats in the row by seat number
+    const sortedSeats = sectionSeats.sort((a, b) => a.number - b.number);
+    
+    // Find the index of the clicked seat
+    const startIndex = sortedSeats.findIndex(
+      seat => seat.number === startNumber && seat.status === 'available'
+    );
+
+    
+    // If the clicked seat is not available, return empty array
+    if (startIndex === -1) return selectedSeats;
+
+    // Select seats to the right of the clicked seat
+    for (let i = startIndex; i < sortedSeats.length; i++) {
+      const seat = sortedSeats[i];
+      
+      // Stop if seat is booked or we've selected enough tickets
+      if (seat.status === 'booked' || this.selectedSeatsCount >= this.numTickets) {
+        break;
+      }
+
+      // Select the seat if it's available
+      if (seat.status === 'available') {
+        seat.status = 'selected';
+        selectedSeats.push(seat);
         this.selectedSeatsCount++;
-        this.updateTotalFare();
-      } else if (selectedSeat.status === 'selected') {
-        selectedSeat.status = 'available';
-        this.selectedSeatsCount--;
-        this.updateTotalFare();
+      }
+
+      // Stop if we've selected required number of tickets
+      if (this.selectedSeatsCount === this.numTickets) {
+        break;
       }
     }
+
+    return selectedSeats;
+  }
+
+  resetSeatSelection(): void {
+    this.seats.forEach(seat => {
+      if (seat.status === 'selected') {
+        seat.status = 'available';
+      }
+    });
+    this.selectedSeatsCount = 0;
+    this.totalFare = 0;
   }
 
   updateTotalFare(): void {
